@@ -1,8 +1,28 @@
 require 'sinatra/base'
 
 class Battle < Sinatra::Base
+
+  enable :sessions
+
+  set :port, 8080
+  set :static, true
+  set :public_folder, "static"
+  set :views, "views"
+
   get '/' do
-    'Hello Battle!'
+    erb(:index)
+  end
+
+  post '/names' do
+    session[:player_1_name] = params[:player_1_name]
+    session[:player_2_name] = params[:player_2_name]
+    redirect '/play'
+  end
+
+  get '/play' do
+    @player_1_name = session[:player_1_name]
+    @player_2_name = session[:player_2_name]
+    erb :play
   end
 
   # start the server if ruby file executed directly
