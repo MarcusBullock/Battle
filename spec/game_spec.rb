@@ -12,4 +12,12 @@ describe Game do
       game.attack(player_1)
     end
   end
+
+  describe '#switch_attack' do
+    it '-> changes player\'s turn' do
+      allow(player_1).to receive(:receive_damage)
+      game.switch_attack
+      expect(game.turn).to eq false
+    end
+  end
 end
