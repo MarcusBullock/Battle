@@ -1,9 +1,20 @@
 <div style='border: 3px double red'>
   <img src='http://i.imgur.com/e8a5w9s.gif'>
 </div>
-<h1><%= @player_1_name %> vs. <%= @player_2_name %></h1>
-<h2><%= @player_1_name %>: 100HP</h2>
-<h2><%= @player_2_name %>: 100HP</h2>
+
+
+
+
+<h1 style="color:#004d00;size:6;text-align:center;"><%= @player_1_name %> vs. <%= @player_2_name %></h1>
+<h2><%= @player_1_name %>: <%= @player_1_hit_points %>HP</h2>
+<h2><%= @player_2_name %>: <%= @player_2_hit_points %>HP</h2>
 <div style='border: 3px double red'>
   <img src='http://i.imgur.com/e8a5w9s.gif'>
 </div>
+
+
+
+
+<form action= "/attack">
+  <input type="submit" value="Attack!!!">
+</form>
