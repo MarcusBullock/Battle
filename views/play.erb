@@ -5,13 +5,10 @@
 <p><progress id="p1" value="<%= @player_1.hit_points %>" max="100"> </progress></p>
 <h2><%= @player_2.name %>: <%= @player_2.hit_points %>HP</h2>
 
+<p><progress id="p2" value="<%= @player_2.hit_points %>" max="100"> </progress></p>
 
 <img style='border: 3px double red' src='http://i.imgur.com/e8a5w9s.gif'>
 
-<p><progress id="p2" value="<%= @player_2.hit_points %>" max="100"> </progress></p>
-<div style='border: 3px double red'>
-  <img src='http://i.imgur.com/e8a5w9s.gif'>
-</div>
 
 <form action= "/attack">
   <input type="submit" value="Attack!!!">
