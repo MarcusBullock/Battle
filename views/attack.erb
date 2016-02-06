@@ -1,16 +1,18 @@
+<img style='border: 3px double red' src='https://media.giphy.com/media/75yk3rYrClLyM/giphy.gif'>
+
 <% if @turn == false %>
   <h1 style="color:#004d00;size:6;text-align:center;">
-    <%= @player_1.name %> viciously attacked his arch-nemesis, <%= @player_2.name %>!!!
+    <%= @player_1.name %> viciously attacked arch-nemesis, <%= @player_2.name %>!!!
   </h1>
   <h2 style="color:#004d00;size:6;text-align:center;">
-    <%= @player_2.name %>'s HP goes down by 20! Shitballs! <%= @player_2.name %>'s health is now at: <%=@player_2.hit_points%>HP
+    <%= @player_2.name %> got hit! Shitballs! <%= @player_2.name %>'s health is now at: <%=@player_2.hit_points%>HP
   </h2>
 <% else %>
   <h1 style="color:#004d00;size:6;text-align:center;">
-    <%= @player_2.name %> viciously attacked his arch-nemesis, <%= @player_1.name %>!!!
+    <%= @player_2.name %> viciously attacked arch-nemesis, <%= @player_1.name %>!!!
   </h1>
   <h2 style="color:#004d00;size:6;text-align:center;">
-    <%= @player_1.name %>'s HP goes down by 20! Shitballs! <%= @player_1.name %>'s health is now at: <%=@player_1.hit_points%>HP
+    <%= @player_1.name %> got hit! Shitballs! <%= @player_1.name %>'s health is now at: <%=@player_1.hit_points%>HP
   </h2>
 <% end %>
 
@@ -19,5 +21,7 @@ Player2
 Player1
 <p><progress value="<%= @player_1.hit_points %>" max="100"> </progress></p>
 
-<img style='border: 3px double red' src='http://49.media.tumblr.com/e4da3090e08789c6432b034c9d2591c0/tumblr_mzi7ktPV6s1r6jnjdo1_400.gif'>
-<a href="/play"><button>back</button></a>
+<img style='border: 3px double red' src='https://31.media.tumblr.com/e4da3090e08789c6432b034c9d2591c0/tumblr_mzi7ktPV6s1r6jnjdo1_400.gif'>
+
+
+<a href="/play"><button>NEXT TURN!!!!</button></a>

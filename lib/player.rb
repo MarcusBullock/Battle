@@ -10,7 +10,11 @@ class Player
   end
 
   def receive_damage
-    @hit_points -= 20
+    @hit_points -= Kernel.rand(20)
+  end
+
+  def dead?
+    @hit_points <= 0
   end
 
 end
